@@ -1,12 +1,12 @@
 Name:           s3fs-fuse
-Version:        1.84
+Version:        1.90
 Release:        0%{?dist}
 Summary:        FUSE-based file system backed by Amazon S3
 Group:          System Environment/Base
 
 License:        GPLv2
 URL:            https://github.com/s3fs-fuse/s3fs-fuse
-Source0:        https://github.com/s3fs-fuse/s3fs-fuse/archive/%{name}-%{version}.tar.gz
+Source0:        https://github.com/s3fs-fuse/s3fs-fuse/archive/refs/tags/v%{version}.tar.gz
 
 Requires:       fuse >= 2.8.4
 Requires:       curl >= 7.0
@@ -61,6 +61,10 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Fri Sep 10 2021 Nico Kadel-Garcia <nkadel@gmail.com> - 1.90
+- Update to 1.90
+- Upd URL to github tag
+
 * Mon Aug 20 2018 Nico Kadel-Garcia <nkadel@gmail.com> - 1.84
 - Update to 1.84
 - Add version dependencies to -devel packages for BuildRequires
